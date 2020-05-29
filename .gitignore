@@ -1,0 +1,28 @@
+# Compiled Source #
+###################
+*.pyc
+build/*
+*.so
+*pyd
+
+# C/Cython files  #
+###################
+gym_cloth/physics/cloth.c
+gym_cloth/physics/gripper.c
+gym_cloth/physics/point.c
+
+# Other #
+#########
+vismpc/sv2p_data_cloth/
+vismpc/sv2p_model_cloth/
+dist/*
+*.egg-info
+*.swp
+*.swo
+*.log
+logs/
+data/
+*.prof
+*.pkl
+*.obj
+*.png

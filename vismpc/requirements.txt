@@ -1,0 +1,4 @@
+tensorflow-gpu==1.14.0
+dotmap==1.2.20
+-e t2t
+moviepy
