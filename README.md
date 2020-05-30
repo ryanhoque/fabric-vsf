@@ -1,5 +1,19 @@
 # VisuoSpatial Foresight (VSF) for Fabric Manipulation
 
+This is the code for the RSS 2020 paper "VisuoSpatial Foresight for Multi-Step,
+Multi-Task Fabric Manipulation" ([arXiv][3], [project website][4]). It contains
+all code except for the physical experiments with the surgical robot, [which is
+here][5]. If you find the code useful, please consider citing the paper:
+
+```
+@inproceedings{fabric_vsf_2020,
+    author = {Ryan Hoque and Daniel Seita and Ashwin Balakrishna and Aditya Ganapathi and Ajay Tanwani and Nawid Jamali and Katsu Yamane and Soshi Iba and Ken Goldberg},
+    title = {{VisuoSpatial Foresight for Multi-Step, Multi-Task Fabric Manipulation}},
+    booktitle = {Robotics: Science and Systems (RSS)},
+    Year = {2020}
+}
+```
+
 This repository is built off the [gym-cloth repository](https://github.com/DanielTakeshi/gym-cloth), an RL environment wrapped around a fabric simulator. The repository includes code for fabric manipulation with VSF (see the project website [here](sites.google.com/view/fabric-vsf/home)), primarily in the `vismpc/` directory. The most relevant files for Visual MPC are `scripts/run.py`, `cfg/sim.yaml`, `gym_cloth/envs/cloth_env.py`, and `vismpc/mpc.py`. See `vismpc/README.md` for detailed instructions.
 
 Instructions for gym-cloth in general are below:
@@ -49,11 +63,11 @@ changes in `gym_cloth/` or `vismpc/`, for example:
 
 To visualize the simulator in real time, you will need to install the OpenGL renderer,
 which is currently an independent C++ program. However this won't be possible if running
-Visual MPC on a remote server. In this case, there are other ways to inspect results 
+Visual MPC on a remote server. In this case, there are other ways to inspect results
 (see `vismpc/README.md`).
 
 These instructions have been tested on Mac OS X and Ubuntu 18.04. For some
-reason, we have not been able to get this working for Ubuntu 16.04. For Ubuntu 18.04, you 
+reason, we have not been able to get this working for Ubuntu 16.04. For Ubuntu 18.04, you
 might need sudo access for `make -j4 install`.
 
 1. Navigate to `render/ext/libzmq`. Run
@@ -100,3 +114,6 @@ Notes:
 
 [1]:https://github.com/openai/gym/tree/master/gym/envs
 [2]:https://github.com/openai/gym/pull/1314
+[3]:https://arxiv.org/abs/2003.09044
+[4]:https://sites.google.com/view/fabric-vsf
+[5]:https://github.com/BerkeleyAutomation/dvrk-vismpc/tree/master
