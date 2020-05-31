@@ -39,4 +39,4 @@ This will use the same `cfg/sim.yaml` as earlier. This time, do the following:
 - Set `env > viz_vismpc = True` to visualize the top 10 CEM elites at every iteration in `logs/debug`.
 
 ## Run the policy on the dVRK
-Run `python vismpc/scripts/dvrk.py --model_path [model] --goal_img [goal]`. This will wait for robot observations to populate a specific directory and return the policy.
+Run `python vismpc/scripts/dvrk.py --model_path [model] --goal_img [goal]`. This will wait for robot observations to populate a specific directory and return the policy. See further instructions in our physical experiment repository [here](https://github.com/BerkeleyAutomation/dvrk-vismpc/tree/master).
