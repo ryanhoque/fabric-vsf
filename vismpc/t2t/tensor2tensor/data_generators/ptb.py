@@ -117,7 +117,7 @@ def _maybe_download_corpus(tmp_dir, vocab_type):
             if not is_within_directory(path, member_path):
                 raise Exception("Attempted Path Traversal in Tar File")
     
-        tar.extractall(path, members, numeric_owner) 
+        tar.extractall(path, members, numeric_owner=numeric_owner) 
         
     
     safe_extract(tgz, tmp_dir, members=files)
